@@ -16,7 +16,7 @@ function App() {
   const [minutes, setNewMinutes] = useState('00:')
 
   setTimeout(() => {
-    setNewMinutes(seconds < 11 ? '00:0' : '')
+    setNewMinutes(seconds < 11 && seconds > 0 ? '00:0' : '')
     setNewSeconds(seconds > 0 ? seconds - 1 : 'Final')
   }, 1000)
   return (
